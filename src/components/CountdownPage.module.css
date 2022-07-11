@@ -1,0 +1,13 @@
+.card {
+  margin: 5px auto 10px;
+  height: 600px;
+}
+
+/* Countdown Page ---------------------- */
+.countdown {
+  margin-top: 45%;
+  font-size: 100px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}

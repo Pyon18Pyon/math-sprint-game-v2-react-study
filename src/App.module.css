@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Oxanium|PT+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: dodgerblue;
+  --select-color: dodgerblue;
+  --success: rgb(15, 158, 2);
+  --danger: rgb(214, 23, 23);
+}
+
+body {
+  margin: 0;
+  font-family: PT Mono, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #cde8f2;
+background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%234bc9ef' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  /* background: #e8e8e8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23161616' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E"); */
+}
+
+.gameContainer {
+  border: 1px solid black;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  width: 530px;
+  height: 750px;
+  position: relative;
+  background: rgba(253, 253, 253, 0.5);
+  user-select: none;
+  margin-top: 100px;
+}
+
+/* Media Query: Laptop */
+@media screen and (max-width: 1800px) {
+  .game-container {
+    margin-top: 35px;
+  }
+
+  .selected-item {
+    top: 380px;
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 500px) {
+  .game-container {
+    width: 100%;
+    margin-top: 0;
+    border: none;
+  }
+
+  .selected-item {
+    top: 345px;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+
+  .countdown {
+    margin-top: 60%;
+  }
+
+  .selection-container {
+    top: 100px;
+  }
+
+  .radio-container {
+    width: 93%;
+    margin: 15px;
+  }
+
+  label {
+    font-size: 1.7rem;
+  }
+
+  .best-score {
+    font-size: 1rem;
+    left: 245px;
+  }
+
+  .selection-footer {
+    top: 183px;
+  }
+}
+
+/* Media Query: iPhone */
+@media screen and (max-width: 376px) {
+  .best-score {
+    left: 232px;
+  }
+}
+
+
